@@ -12,9 +12,17 @@ using namespace std;
  * promptNumbers
  *
  ***********************************************************************/
-void promptNumbers()
+void promptNumbers(vector<int> &numbers)
 {
-   return;
+   int num = 1;
+
+   while (num != 0)
+   {
+      cout << "Numbers: ";
+      cin >> num;
+      if (num != 0)
+         numbers.push_back(num);
+   }
 }
 
 /**********************************************************************
@@ -41,5 +49,6 @@ void removeOdds()
  ***********************************************************************/
 int main()
 {
+   vector< int > numbers;
    return 0;
 }
