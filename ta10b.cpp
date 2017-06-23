@@ -30,9 +30,9 @@ void promptNumbers(list <int> &numbers)
  * displayNumbers
  *
  ***********************************************************************/
-void displayNumbers(list <int> &numbers)
+void displayNumbers(const list <int> &numbers)
 {
-   list <int>::iterator it;
+   const list <int>::iterator it;
    
    for (it = numbers.begin(); it != numbers.end(); ++it)
       cout << *it << endl;
@@ -64,7 +64,7 @@ int main()
    list < int > numbers;
 
    promptNumbers(numbers);
-   displayNumbers(numbers);
+   displayNumbers(const numbers);
    removeOdds(numbers);
    cout << "Odds Removed:\n";
    displayNumbers(numbers);
