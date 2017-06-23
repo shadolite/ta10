@@ -41,9 +41,17 @@ void displayNumbers(vector<int> &numbers)
  * removeOdds
  *
  ***********************************************************************/
-void removeOdds()
+void removeOdds(vector<int> &numbers)
 {
-   return;
+   vector<int>::iterator it;
+   for (it = numbers.begin(); it != numbers.end(); )
+   {
+      if ((*it)%2 != 0)
+         it = numbers.erase(it);
+      else
+         it++;
+   }
+
 }
 
 /**********************************************************************
@@ -57,6 +65,7 @@ int main()
    promptNumbers(numbers);
    displayNumbers(numbers);
    removeOdds(numbers);
-   
+   displayNumbers(numbers);
+
    return 0;
 }
