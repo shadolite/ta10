@@ -6,13 +6,14 @@
 
 #include <iostream>
 #include <vector>
+#include <list>
 using namespace std;
 
 /**********************************************************************
  * promptNumbers
  *
  ***********************************************************************/
-void promptNumbers(vector<int> &numbers)
+void promptNumbers(list <int> &numbers)
 {
    int num = 1;
 
@@ -29,9 +30,9 @@ void promptNumbers(vector<int> &numbers)
  * displayNumbers
  *
  ***********************************************************************/
-void displayNumbers(vector<int> &numbers)
+void displayNumbers(list <int> &numbers)
 {
-   vector<int>::iterator it;
+   list <int>::iterator it;
    
    for (it = numbers.begin(); it != numbers.end(); ++it)
       cout << *it << endl;
@@ -41,9 +42,9 @@ void displayNumbers(vector<int> &numbers)
  * removeOdds
  *
  ***********************************************************************/
-void removeOdds(vector<int> &numbers)
+void removeOdds(list <int> &numbers)
 {
-   vector<int>::iterator it;
+   list <int>::iterator it;
    for (it = numbers.begin(); it != numbers.end(); )
    {
       if ((*it)%2 != 0)
@@ -60,7 +61,7 @@ void removeOdds(vector<int> &numbers)
  ***********************************************************************/
 int main()
 {
-   vector< int > numbers;
+   list < int > numbers;
 
    promptNumbers(numbers);
    displayNumbers(numbers);
