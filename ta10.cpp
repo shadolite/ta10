@@ -29,9 +29,12 @@ void promptNumbers(vector<int> &numbers)
  * displayNumbers
  *
  ***********************************************************************/
-void displayNumbers()
+void displayNumbers(vector<int> &numbers)
 {
-   return;
+   vector<int>::iterator it;
+   
+   for (it = numbers.begin(); it != numbers.end(); ++it)
+      cout << *it << endl;
 }
 
 /**********************************************************************
@@ -50,5 +53,10 @@ void removeOdds()
 int main()
 {
    vector< int > numbers;
+
+   promptNumbers(numbers);
+   displayNumbers(numbers);
+   removeOdds(numbers);
+   
    return 0;
 }
